@@ -35,7 +35,7 @@
 	"plugin": "hadoop",
 	"params": {
 	    "clusterName": "HadoopCluster",
-	    "nameNode": "Container1",
+	    "nameNode": "Container-1",
 	    "replicationFactor": "3"
 	}
     }

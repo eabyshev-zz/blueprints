@@ -1,19 +1,19 @@
 {
-    "name": "My-zookeeper-cluster",
-    "description": "The sample zookeeper cluster",
+    "name": "My-hadoop-cluster",
+    "description": "The sample hadoop cluster",
     "nodes": [{
-	"name": "zookeeper-1",
-	"template": "zookeeper349",
+	"name": "Container-1",
+	"template": "hadoop27",
 	"peer_group": "US-GROUP",
 	"size": "LARGE"
     }, {
-	"name": "zookeeper-2",
-	"template": "zookeeper349",
+	"name": "Container-2",
+	"template": "hadoop27",
 	"peer_group": "EU-GROUP",
 	"size": "LARGE"
     }, {
-	"name": "zookeeper-3",
-	"template": "zookeeper349",
+	"name": "Container-3",
+	"template": "hadoop27",
 	"peer_group": "US-GROUP",
 	"size": "LARGE"
     }],
@@ -36,7 +36,9 @@
     "configuration": {
 	"plugin": "zookeeper",
 	"params": {
-	    "clusterName": "zookeeperCluster"
+	    "clusterName": "hadoopCluster"
+	    "nameNode": "Container-1",
+	    "replicationFactor": "3"
 	}
     }
 }
